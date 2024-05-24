@@ -894,14 +894,14 @@ MonoBehaviour:
   dropdown: {fileID: 328254953}
   dropdownKVP:
     dictionaryList:
-    - Key: 0
+    - Key: 10
       Value:
       - High
       - Medium
       - Low
       index: 0
       isKeyDuplicated: 0
-    - Key: 1
+    - Key: 30
       Value:
       - "\u0412\u044B\u0441\u043E\u043A\u0438\u0439"
       - "\u0421\u0440\u0435\u0434\u043D\u0438\u0439"
@@ -2558,11 +2558,11 @@ MonoBehaviour:
   textMeshProUGUI: {fileID: 1489370640}
   textKVP:
     dictionaryList:
-    - Key: 0
+    - Key: 10
       Value: Hello
       index: 0
       isKeyDuplicated: 0
-    - Key: 1
+    - Key: 30
       Value: "\u041F\u0440\u0438\u0432\u0435\u0442"
       index: 1
       isKeyDuplicated: 0
@@ -3567,11 +3567,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameObjectKVP:
     dictionaryList:
-    - Key: 0
+    - Key: 10
       Value: {fileID: 1369551881}
       index: 0
       isKeyDuplicated: 0
-    - Key: 1
+    - Key: 30
       Value: {fileID: 835214738}
       index: 1
       isKeyDuplicated: 0
@@ -3623,62 +3623,14 @@ MonoBehaviour:
   internalNameText: {fileID: 131968883}
   internalNames:
     dictionaryList:
-    - Key: 0
+    - Key: 10
       Value: George
       index: 0
       isKeyDuplicated: 0
-    - Key: 1
+    - Key: 30
       Value: "\u0413\u0435\u043E\u0440\u0433\u0438\u0439"
       index: 1
       isKeyDuplicated: 0
---- !u!1 &2016799629
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2016799631}
-  - component: {fileID: 2016799630}
-  m_Layer: 0
-  m_Name: Save Test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2016799630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016799629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e54af2c046d7696448111e6b5ff47d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  files:
-  - a
-  - b
-  - c
---- !u!4 &2016799631
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016799629}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064648552
 GameObject:
   m_ObjectHideFlags: 0

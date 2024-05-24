@@ -7,7 +7,7 @@ namespace ProjectTools.Localization
 {
     public class LocalizationGameObject : LocalizationAbstractSceneComponent
     {
-        [SerializeField] private SerializableDictionary<GameLanguage, GameObject> gameObjectKVP;
+        [SerializeField] private SerializableDictionary<SystemLanguage, GameObject> gameObjectKVP;
 
         private void Awake()
         {
@@ -20,7 +20,7 @@ namespace ProjectTools.Localization
             LocalizationLanguage.OnLanguageChange -= OnLanguageChange;
         }
 
-        protected override void UpdateLocalizationData(GameLanguage newLanguage)
+        protected override void UpdateLocalizationData(SystemLanguage newLanguage)
         {
             foreach (var gameObject in gameObjectKVP.Values)
             {
@@ -30,7 +30,7 @@ namespace ProjectTools.Localization
             gameObjectKVP[newLanguage].SetActive(true);
         }
 
-        protected override void OnLanguageChange(GameLanguage newLanguage)
+        protected override void OnLanguageChange(SystemLanguage newLanguage)
         {
             UpdateLocalizationData(newLanguage);
         }

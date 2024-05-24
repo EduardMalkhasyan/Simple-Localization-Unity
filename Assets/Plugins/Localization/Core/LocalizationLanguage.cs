@@ -6,48 +6,40 @@ using UnityEngine;
 
 namespace ProjectTools.Localization.ScriptableObject
 {
-    public enum GameLanguage
-    {
-        English,
-        Russian
-    }
-
     public class LocalizationLanguage : SOLoader<LocalizationLanguage>
     {
         private const string currentLanguageKey = "LocalizationLanguage_CurrentLanguageKey";
-        public static event System.Action<GameLanguage> OnLanguageChange;
+        public static event System.Action<SystemLanguage> OnLanguageChange;
 
         [SerializeField] private bool canShowDebugMessage;
 
-        public GameLanguage CurrentLanguage
+        public SystemLanguage CurrentLanguage
         {
             get
             {
-                if (DataSaver.TryLoadAsJSON(out GameLanguage value, customKey: currentLanguageKey, showDebug: false))
-                {
-                    return value;
-                }
-                else
-                {
-                    DataSaver.SaveAsJSON(GameLanguage.English, customKey: currentLanguageKey, showDebug: false);
-                    return GameLanguage.English;
-                }
+                return (SystemLanguage)PlayerPrefs.GetInt(currentLanguageKey, (int)SystemLanguage.English);
             }
             private set
             {
-                DataSaver.SaveAsJSON(value, customKey: currentLanguageKey, showDebug: canShowDebugMessage);
+                PlayerPrefs.SetInt(currentLanguageKey, (int)value);
+
+                if (canShowDebugMessage)
+                {
+                    Debug.Log($"Current language now is {value}");
+                }
+
                 OnLanguageChange?.Invoke(value);
             }
         }
 
-        public void SetLanguage(GameLanguage newLanguage)
+        public void SetLanguage(SystemLanguage newLanguage)
         {
             CurrentLanguage = newLanguage;
         }
 
         public void ResetData()
         {
-            CurrentLanguage = GameLanguage.English;
+            CurrentLanguage = SystemLanguage.English;
         }
     }
 
@@ -67,7 +59,7 @@ namespace ProjectTools.Localization.ScriptableObject
             LocalizationLanguage component = (LocalizationLanguage)target;
 
             serializedObject.Update();
-            component.SetLanguage((GameLanguage)EditorGUILayout.EnumPopup("Current Language", component.CurrentLanguage));
+            component.SetLanguage((SystemLanguage)EditorGUILayout.EnumPopup("Current Language", component.CurrentLanguage));
             EditorGUILayout.PropertyField(canShowDebugMessageProp, new GUIContent("Show Debug Messages"));
 
             if (GUILayout.Button("Reset Data"))

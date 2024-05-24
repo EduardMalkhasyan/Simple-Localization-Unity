@@ -11,7 +11,7 @@ namespace ProjectTools.Localization
     public class LocalizationTMPDropDown : LocalizationAbstractSceneComponent
     {
         [SerializeField] private TMP_Dropdown dropdown;
-        [SerializeField] private SerializableDictionary<GameLanguage, string[]> dropdownKVP;
+        [SerializeField] private SerializableDictionary<SystemLanguage, string[]> dropdownKVP;
 
         private void Awake()
         {
@@ -24,7 +24,7 @@ namespace ProjectTools.Localization
             LocalizationLanguage.OnLanguageChange -= OnLanguageChange;
         }
 
-        protected override void UpdateLocalizationData(GameLanguage newLanguage)
+        protected override void UpdateLocalizationData(SystemLanguage newLanguage)
         {
             var localizationTexts = dropdownKVP[newLanguage];
 
@@ -45,7 +45,7 @@ namespace ProjectTools.Localization
             }
         }
 
-        protected override void OnLanguageChange(GameLanguage newLanguage)
+        protected override void OnLanguageChange(SystemLanguage newLanguage)
         {
             UpdateLocalizationData(newLanguage);
         }

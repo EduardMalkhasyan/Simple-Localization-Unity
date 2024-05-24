@@ -8,7 +8,7 @@ namespace ProjectTools.Localization
     public class LocalizationTMPText : LocalizationAbstractSceneComponent
     {
         [SerializeField] private TextMeshProUGUI textMeshProUGUI;
-        [SerializeField] private SerializableDictionary<GameLanguage, string> textKVP;
+        [SerializeField] private SerializableDictionary<SystemLanguage, string> textKVP;
 
         private void Awake()
         {
@@ -21,12 +21,12 @@ namespace ProjectTools.Localization
             LocalizationLanguage.OnLanguageChange -= OnLanguageChange;
         }
 
-        protected override void UpdateLocalizationData(GameLanguage newLanguage)
+        protected override void UpdateLocalizationData(SystemLanguage newLanguage)
         {
             textMeshProUGUI.text = textKVP[newLanguage];
         }
 
-        protected override void OnLanguageChange(GameLanguage newLanguage)
+        protected override void OnLanguageChange(SystemLanguage newLanguage)
         {
             UpdateLocalizationData(newLanguage);
         }
