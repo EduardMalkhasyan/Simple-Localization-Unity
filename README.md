@@ -62,18 +62,21 @@ namespace BugiGames.Main
 ```
 ## Posibilities of this plugin:
 
-#1 TMP Text Localization 
+1 TMP Text Localization 
+
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/fd721716-96a4-4dd2-9bed-6343fd4cdb93)
 
-#2 TMP Dropdown Localization 
+2 TMP Dropdown Localization 
+
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/2c19e574-3b36-4dc7-bd23-28fa823629ec)
 
-#3 Gameobject Localization 
+3 Gameobject Localization 
+
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/15b5426c-9910-432d-8d5c-b1646655bd87)
 
-#3 Internal (from script) Localization 
-![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/126983e1-c449-430d-8422-2ad491e7262c)
+3 Internal (from script) Localization 
 
+![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/126983e1-c449-430d-8422-2ad491e7262c)
 
 
 ## Final Result:
