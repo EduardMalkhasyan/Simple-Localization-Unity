@@ -78,6 +78,10 @@ namespace BugiGames.Main
 
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/126983e1-c449-430d-8422-2ad491e7262c)
 
+## Plugin control location 
+
+![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/232e7e28-d10b-4882-b5a6-975103b509af)
+
 
 ## Final Result:
 
