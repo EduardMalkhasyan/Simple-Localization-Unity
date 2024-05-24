@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace ProjectTools.Localization
 {
+    [RequireComponent(typeof(TextMeshProUGUI))]
     public class LocalizationTMPText : LocalizationAbstractSceneComponent
     {
         [SerializeField] private TextMeshProUGUI textMeshProUGUI;

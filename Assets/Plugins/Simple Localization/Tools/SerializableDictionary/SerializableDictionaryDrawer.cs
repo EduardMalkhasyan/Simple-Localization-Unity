@@ -111,7 +111,7 @@ namespace ProjectTools.Tools
                         case SerializedPropertyType.String:
                             return property.stringValue;
                         default:
-                            return "(Unsupported Type)";
+                            return " ";
                     }
                 }
 

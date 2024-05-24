@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace ProjectTools.Localization
 {
+    [RequireComponent(typeof(TMP_Dropdown))]
     public class LocalizationTMPDropDown : LocalizationAbstractSceneComponent
     {
         [SerializeField] private TMP_Dropdown dropdown;
