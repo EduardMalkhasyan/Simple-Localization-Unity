@@ -6,9 +6,9 @@ Has extensions only with Text mesh pro not with Unity text
 [Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases)
 
 ## How to Use:
-Just simpy import Unity Package and it ready to use! plugin works with ([Serialiable Dictionary](https://github.com/EduardMalkhasyan/Serializable-Dictionary-Unity)) so its optimazed in link pass
+Simply import the Unity Package, and it's ready to use! The plugin works seamlessly with ([Serialiable Dictionary](https://github.com/EduardMalkhasyan/Serializable-Dictionary-Unity)) optimizing link passes.
 
-Script example - for more detail look in demo scene inside plugin
+Script example - For further details, refer to the demo scene within the plugin
 ```csharp
 using ProjectTools.Localization.ScriptableObject;
 using ProjectTools.Tools;
