@@ -60,7 +60,7 @@ namespace BugiGames.Main
     }
 }
 ```
-## Posibilities of this plugin:
+## Possibilities of this plugin:
 
 1 TMP Text Localization 
 
