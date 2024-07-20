@@ -60,7 +60,7 @@ namespace ProjectTools.Localization
                 LocalizationTMPDropDown component = (LocalizationTMPDropDown)target;
 
                 EditorGUILayout.HelpBox("Please check if dropdownKVP must be same size with TMP_Dropdown.dropdown",
-                                         UnityEditor.MessageType.Warning);
+                                         UnityEditor.MessageType.Info);
 
                 base.OnInspectorGUI();
             }

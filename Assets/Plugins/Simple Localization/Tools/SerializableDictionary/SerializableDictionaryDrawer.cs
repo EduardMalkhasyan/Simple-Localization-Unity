@@ -49,7 +49,15 @@ namespace ProjectTools.Tools
                 void DisplayName()
                 {
                     GUI.color = Color.white;
+
+#if UNITY_2022_1_OR_NEWER
+                    var labelRect = headerRect;
+                    labelRect.x += 12;
+                    GUI.Label(labelRect, prop.displayName);
+#else
                     GUI.Label(headerRect, prop.displayName);
+#endif
+
                     GUI.color = Color.white;
                     GUI.skin.label.fontSize = 12;
                     GUI.skin.label.fontStyle = FontStyle.Normal;
@@ -111,7 +119,7 @@ namespace ProjectTools.Tools
                         case SerializedPropertyType.String:
                             return property.stringValue;
                         default:
-                            return " ";
+                            return "(Unsupported Type)";
                     }
                 }
 
@@ -251,6 +259,29 @@ namespace ProjectTools.Tools
             void Value()
             {
                 Draw(valueRect, valueProp);
+
+#if !ODIN_INSPECTOR
+                if (valueProp.type.StartsWith("InterfaceHolder"))
+                {
+                    var interfaceValue = valueProp.FindPropertyRelative("value");
+                    MonoBehaviour newValue = (MonoBehaviour)EditorGUI.ObjectField(valueRect,
+                                              interfaceValue.objectReferenceValue, typeof(MonoBehaviour), true);
+
+                    if (interfaceValue.objectReferenceValue != newValue)
+                    {
+                        if (newValue == null || newValue.GetComponent(
+                            fieldInfo.FieldType.GenericTypeArguments[1].GenericTypeArguments[0]) != null)
+                        {
+                            interfaceValue.objectReferenceValue = newValue;
+                        }
+                        else
+                        {
+                            Debug.LogWarning($"Assigned object must implement interface " +
+                                             $"{fieldInfo.FieldType.GenericTypeArguments[1].GenericTypeArguments[0].Name}");
+                        }
+                    }
+                }
+#endif
             }
 
             void Divider()
