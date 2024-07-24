@@ -1,6 +1,6 @@
 # Simple-Localization-Unity
 
-Has extensions only with Text mesh pro not with Unity text
+Has extensions only with TextMesh Pro not with Unity text
 
 ## Download Unity Package:
 [Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases)
