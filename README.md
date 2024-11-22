@@ -4,6 +4,7 @@ Has extensions only with TextMesh Pro not with Unity text. Aslo this plugin is r
 
 ## Download Unity Package:
 [Simple Version Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Simple_Localization_v_1_0_1)
+
 [Medium Size Projects Version Download (need Odin Inspector)](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Localization_v_1_0_2_Odin_Support)
 
 ## How to Use:
