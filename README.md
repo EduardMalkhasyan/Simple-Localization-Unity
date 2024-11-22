@@ -3,7 +3,8 @@
 Has extensions only with TextMesh Pro not with Unity text. Aslo this plugin is recomended for small projects! if you want for medium and + size projects use this [Version](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Localization_v_1_0_2_Odin_Support) which is works only with [Odin Inspector](https://odininspector.com/)
 
 ## Download Unity Package:
-[Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases)
+[Simple Version Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Simple_Localization_v_1_0_1)
+[Medium Size Projects Version Download (need Odin Inspector)](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Localization_v_1_0_2_Odin_Support)
 
 ## How to Use:
 Simply import the Unity Package, and it's ready to use! The plugin works seamlessly with ([Serialiable Dictionary](https://github.com/EduardMalkhasyan/Serializable-Dictionary-Unity)) optimizing link passes.
