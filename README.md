@@ -1,6 +1,7 @@
 # Simple-Localization-Unity
 
-Has extensions only with TextMesh Pro not with Unity text
+Has extensions only with TextMesh Pro not with Unity text. 
+Aslo this plugin is recomended for small projects! if you want for medium and + size projects use this version which is works only with [Odin Inspector](https://odininspector.com/)
 
 ## Download Unity Package:
 [Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases)
