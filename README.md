@@ -1,5 +1,5 @@
 ## Collaborators
-- [@username1](https://github.com/Pituivan)
+- [@Pituivan](https://github.com/Pituivan)
   
 # Simple-Localization-Unity
 
