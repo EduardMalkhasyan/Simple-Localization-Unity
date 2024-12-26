@@ -1,4 +1,4 @@
-## Collaborators
+# Collaborators
 - [@Pituivan](https://github.com/Pituivan)
   
 # Simple-Localization-Unity
