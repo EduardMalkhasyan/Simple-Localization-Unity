@@ -1,9 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEditor;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ProjectTools.Localization
@@ -12,7 +10,6 @@ namespace ProjectTools.Localization
     public class LocalizationTMPDropdownInspector : LocalizationSceneComponentInspectorBase<string[]>
     {
         private TMP_Dropdown dropdown;
-        private readonly List<ListView> optionsListViews = new();
 
         private int previousOptionsCount;
 
@@ -39,23 +36,17 @@ namespace ProjectTools.Localization
             previousOptionsCount = dropdown.options.Count;
         }
 
-        protected override VisualElement MakeValueCell()
+        protected override VisualElement MakeValueCell() => new ListView
         {
-            var listView = new ListView
+            makeNoneElement = () => new Label("No options"),
+            makeItem = () =>
             {
-                makeNoneElement = () => new Label("No options"),
-                makeItem = () =>
-                {
-                    var textField = new TextField();
-                    textField.style.marginRight = 3;
+                var textField = new TextField();
+                textField.style.marginRight = 3;
 
-                    return textField;
-                }
-            };
-            optionsListViews.Add(listView);
-
-            return listView;
-        }
+                return textField;
+            }
+        };
 
         protected override void BindValueCell(VisualElement ve1, int i)
         {
@@ -67,10 +58,8 @@ namespace ProjectTools.Localization
             
             if (values.Length != dropdown.options.Count)
             {
-                Array.Resize(ref values, dropdown.options.Count + 1);
+                Array.Resize(ref values, dropdown.options.Count);
             }
-
-            listView.itemsSource = values;
 
             listView.bindItem = (ve2, j) =>
             {
@@ -78,11 +67,18 @@ namespace ProjectTools.Localization
                 textField.textEdition.placeholder = "Option " + (j + 1);
                 textField.value = values[j];
 
-                textField.RegisterValueChangedCallback(evt =>
-                {
-                    values[j] = evt.newValue;
-                });
+                EventCallback<ChangeEvent<string>> callback = evt => values[j] = evt.newValue;
+                textField.RegisterCallback(callback);
+                textField.userData = callback;
             };
+
+            listView.unbindItem = (textField, _) =>
+            {
+                var callback = (EventCallback<ChangeEvent<string>>)textField.userData;
+                textField.UnregisterCallback(callback);
+            };
+
+            listView.itemsSource = values;
         }
     }
 }
