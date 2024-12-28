@@ -69,7 +69,7 @@ namespace BugiGames.Main
 
 1 TMP Text Localization 
 
-![image](https://github.com/user-attachments/assets/0b3e36db-e45a-4d90-92f7-776f4eed0ce7)
+![image](https://github.com/user-attachments/assets/9a6a284b-1429-47f8-85ef-d4080343b657)
 
 2 TMP Dropdown Localization 
 
