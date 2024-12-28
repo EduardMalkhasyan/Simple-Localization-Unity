@@ -96,6 +96,3 @@ namespace BugiGames.Main
 
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
 
-![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
-![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
-
