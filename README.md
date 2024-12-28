@@ -7,7 +7,6 @@ Has extensions only with TextMesh Pro not with Unity text. Aslo this plugin is r
 
 ## Download Unity Package:
 [Simple Version Download](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Simple_Localization_v_1_0_1)
-
 [Medium Size Projects Version Download (need Odin Inspector)](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/releases/tag/Localization_v_1_0_2_Odin_Support)
 
 ## How to Use:
@@ -69,16 +68,17 @@ namespace BugiGames.Main
 
 1 TMP Text Localization 
 
-![image](https://github.com/user-attachments/assets/963f125a-00c1-4c38-8a40-32e9f026080d)
+![image](https://github.com/user-attachments/assets/0b3e36db-e45a-4d90-92f7-776f4eed0ce7)
 
 2 TMP Dropdown Localization 
 
-![image](https://github.com/user-attachments/assets/5075e6c1-1f30-4666-ab38-59b99eb130df)
+![image](https://github.com/user-attachments/assets/2c220957-498e-452e-9bc5-6976d60f33d8)
 
 3 GameObject Localization 
 
-![image](https://github.com/user-attachments/assets/986f5820-49ef-4509-a983-e29abf9d8271)<br>
-![image](https://github.com/user-attachments/assets/b4036d0b-672f-4eae-83c7-0b21f47d5284)
+![image](https://github.com/user-attachments/assets/ec3be910-153f-4b50-8373-330c9a1ad261)
+<br>
+![image](https://github.com/user-attachments/assets/cdaf6dd9-7c57-405b-b90d-fa992d3dea9f)
 
 4 Internal (from script) Localization 
 
@@ -92,6 +92,8 @@ namespace BugiGames.Main
 ## Final Result:
 
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/1c0dcfda-e40a-44c2-a029-b89b8048505d)
+
+![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
 
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
