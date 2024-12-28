@@ -1,21 +1,18 @@
 using ProjectTools.Localization.ScriptableObject;
-using ProjectTools.Tools;
 using TMPro;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 using UnityEngine;
 
 namespace ProjectTools.Localization
 {
     [RequireComponent(typeof(TMP_Dropdown))]
-    public class LocalizationTMPDropDown : LocalizationAbstractSceneComponent
+    public class LocalizationTMPDropDown : LocalizationAbstractSceneComponent<string[]>
     {
-        [SerializeField] private TMP_Dropdown dropdown;
-        [SerializeField] private SerializableDictionary<SystemLanguage, string[]> dropdownKVP;
+        [SerializeReference] private TMP_Dropdown dropdown;
 
         private void Awake()
         {
+            dropdown = GetComponent<TMP_Dropdown>();
+
             UpdateLocalizationData(LocalizationLanguage.ImmutableValue.CurrentLanguage);
             LocalizationLanguage.OnLanguageChange += OnLanguageChange;
         }
@@ -27,7 +24,7 @@ namespace ProjectTools.Localization
 
         protected override void UpdateLocalizationData(SystemLanguage newLanguage)
         {
-            var localizationTexts = dropdownKVP[newLanguage];
+            var localizationTexts = KVP[newLanguage];
 
             for (int i = 0; i < dropdown.options.Count; i++)
             {
@@ -50,21 +47,5 @@ namespace ProjectTools.Localization
         {
             UpdateLocalizationData(newLanguage);
         }
-
-#if UNITY_EDITOR
-        [UnityEditor.CustomEditor(typeof(LocalizationTMPDropDown))]
-        public class LocalizationTMPDropDownEditor : UnityEditor.Editor
-        {
-            public override void OnInspectorGUI()
-            {
-                LocalizationTMPDropDown component = (LocalizationTMPDropDown)target;
-
-                EditorGUILayout.HelpBox("Please check if dropdownKVP must be same size with TMP_Dropdown.dropdown",
-                                         UnityEditor.MessageType.Info);
-
-                base.OnInspectorGUI();
-            }
-        }
-#endif
     }
 }

@@ -1,14 +1,10 @@
 using ProjectTools.Localization.ScriptableObject;
-using ProjectTools.Tools;
-using TMPro;
 using UnityEngine;
 
 namespace ProjectTools.Localization
 {
-    public class LocalizationGameObject : LocalizationAbstractSceneComponent
+    public class LocalizationGameObject : LocalizationAbstractSceneComponent<GameObject>
     {
-        [SerializeField] private SerializableDictionary<SystemLanguage, GameObject> gameObjectKVP;
-
         private void Awake()
         {
             UpdateLocalizationData(LocalizationLanguage.ImmutableValue.CurrentLanguage);
@@ -22,12 +18,12 @@ namespace ProjectTools.Localization
 
         protected override void UpdateLocalizationData(SystemLanguage newLanguage)
         {
-            foreach (var gameObject in gameObjectKVP.Values)
+            foreach (var gameObject in KVP.Values)
             {
                 gameObject.SetActive(false);
             }
 
-            gameObjectKVP[newLanguage].SetActive(true);
+            KVP[newLanguage].SetActive(true);
         }
 
         protected override void OnLanguageChange(SystemLanguage newLanguage)

@@ -69,15 +69,16 @@ namespace BugiGames.Main
 
 1 TMP Text Localization 
 
-![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/fd721716-96a4-4dd2-9bed-6343fd4cdb93)
+![image](https://github.com/user-attachments/assets/963f125a-00c1-4c38-8a40-32e9f026080d)
 
 2 TMP Dropdown Localization 
 
-![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/2c19e574-3b36-4dc7-bd23-28fa823629ec)
+![image](https://github.com/user-attachments/assets/5075e6c1-1f30-4666-ab38-59b99eb130df)
 
 3 GameObject Localization 
 
-![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/15b5426c-9910-432d-8d5c-b1646655bd87)
+![image](https://github.com/user-attachments/assets/986f5820-49ef-4509-a983-e29abf9d8271)<br>
+![image](https://github.com/user-attachments/assets/b4036d0b-672f-4eae-83c7-0b21f47d5284)
 
 4 Internal (from script) Localization 
 
@@ -92,5 +93,6 @@ namespace BugiGames.Main
 
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/1c0dcfda-e40a-44c2-a029-b89b8048505d)
 
+![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
 ![image](https://github.com/EduardMalkhasyan/Simple-Localization-Unity/assets/78969017/f4f8d14f-fb0c-4eb9-a2bf-a373ee700c79)
 

@@ -1,18 +1,18 @@
 using ProjectTools.Localization.ScriptableObject;
-using ProjectTools.Tools;
 using TMPro;
 using UnityEngine;
 
 namespace ProjectTools.Localization
 {
     [RequireComponent(typeof(TextMeshProUGUI))]
-    public class LocalizationTMPText : LocalizationAbstractSceneComponent
+    public class LocalizationTMPText : LocalizationAbstractSceneComponent<string>
     {
-        [SerializeField] private TextMeshProUGUI textMeshProUGUI;
-        [SerializeField] private SerializableDictionary<SystemLanguage, string> textKVP;
+        private TextMeshProUGUI textMeshProUGUI;
 
         private void Awake()
         {
+            textMeshProUGUI = GetComponent<TextMeshProUGUI>();
+
             UpdateLocalizationData(LocalizationLanguage.ImmutableValue.CurrentLanguage);
             LocalizationLanguage.OnLanguageChange += OnLanguageChange;
         }
@@ -24,7 +24,7 @@ namespace ProjectTools.Localization
 
         protected override void UpdateLocalizationData(SystemLanguage newLanguage)
         {
-            textMeshProUGUI.text = textKVP[newLanguage];
+            textMeshProUGUI.text = KVP[newLanguage];
         }
 
         protected override void OnLanguageChange(SystemLanguage newLanguage)
