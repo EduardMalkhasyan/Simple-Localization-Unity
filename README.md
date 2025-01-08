@@ -1,5 +1,3 @@
-# Still in development
-
 # Collaborators
 - [@Pituivan](https://github.com/Pituivan)
   
